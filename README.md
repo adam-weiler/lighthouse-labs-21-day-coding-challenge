@@ -23,9 +23,12 @@ What can it be? You've turned the power back on, everything should be back to no
 
 You flip through the manual to the section labelled 'Modules', where the first page describes a number of available modules. They are stored in memory in the **availableModules** array. Each module is an object, with four properties:
 
-the **name** of the module is a string
-the **size** of the module is an integer
-the **enabled** and **essential** properties are booleans
+  * the **name** of the module is a string
+
+  * the **size** of the module is an integer
+
+  * the **enabled** and **essential** properties are booleans
+
 Start off by finding out how many modules there are. Make a function called **countModules** to reveal how many modules there are to choose from.
 
 #### Challenge #3
