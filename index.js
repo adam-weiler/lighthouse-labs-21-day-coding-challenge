@@ -12,17 +12,15 @@ function countEssential() { //Counts number of items in the availableModules arr
   return availableModules.filter(record => record.essential).length;
 }
 
-function loadModule(index) { //Uses index to find module in the availableModules, enables the module, and adds it to ship modules array. (Day #4)
+function loadModule(index) { //Uses index to find module in the availableModules, enables the module, and adds it to ship modules array. (Days #4, #5, #6, #8)
   console.log (`Loading module index: ${index}`);
   availableModules[index].enabled = true;
   ship.modules.push(availableModules[index]);
   console.log(ship)
 }
 
-function findModuleIndex(moduleName) { Takes a moduleName and returns the index of that module from the availableModules array. (Days #4, #5, #6)
-  // let numAvailableModules = countModules();
-  
-  for (let x = 0; x < availableModules.length; x++) {
+function findModuleIndex(moduleName) { //Takes a moduleName and returns the index of that module from the availableModules array. (Days #4, #5, #6, #8)
+  for (let x = 0; x < countModules(); x++) {
     if ((availableModules[x].name === moduleName) && availableModules[x].essential) {
       console.log (`Find module '${moduleName}': ${x}`);
       return x;
@@ -38,9 +36,10 @@ function resetLARRY() { //Call the LARRY.quack method 10 times to reset Larry. (
 }
 
 powerOn(); //Sets ship.powerOn to true. Day #1.
-//countModules(); Not used yet. Counts number of items in availableModules. Day #2.
+//countModules(); Counts number of items in availableModules. Day #2.
 countEssential(); //Counts number of items with the Essential flag. Day #3.
 loadModule(findModuleIndex("life-support")); //Enables life support and adds to ship's modules array. Day #4.
 loadModule(findModuleIndex("propulsion")); //Enables propulsion and adds to ship's modules array. Day #5.
 loadModule(findModuleIndex("navigation")); //Enables navigation and adds to ship's modules array. Day #6
 resetLARRY(); //Reset Larry. Day #7.
+loadModule(findModuleIndex("communication")); //Enables communication and adds to ship's modules array. Day #8
