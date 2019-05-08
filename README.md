@@ -35,3 +35,40 @@ Start off by finding out how many modules there are. Make a function called **co
 "QUACK QUACK QUACK QUACK QUACK QUACK QUACK", goes LARRY, his eyes still glowing red. He’s counting off each of the seven modules on the list - you must be on the right track! Now to find out how many of them are essential.
 
 Use your JavaScript skills to write a function called **countEssential()** which will count how many modules from the **availableModules** array have the **essential** flag set.
+
+#### Challenge #4
+"DANGER QUACK DANGER QUACK!"
+
+LARRY seemed so happy before, but he really is starting to get a bit agitated. Now that you know there are three essential modules, maybe you should start loading them into the ship's systems.
+
+Write a function called loadModule(). It needs to take a parameter, called index. Your function should be set up like this:
+
+function loadModule(index) { }
+
+When loadModule gets the index number of a module, it should load the corresponding module from availableModules into the ship’s modules property (which is already an array). Before you load it in, set the enabled property to true. You need to loop over the availableModules and find the module called "life-support" and get its index, then use it to call loadModule().
+
+**Hint:** You need to either loop through availableModules outside of any function or write a seperate function that handles the looping make sure it is called in your code"
+
+#### Challenge #5
+"BREATHE EASIER!" LARRY quacks out. "LITERALLY. Life support module loaded. Propulsion needed."
+
+You can re-use your code from before, but this time you should do what all good programmers do: modularize your code. Write a function called findModuleIndex() which will take in a name that you’re looking for, and return the index of that module in the availableModules array. Remember: it has to have the essential flag, too!
+
+Use your findModuleIndex function to find the "propulsion" module and then load it into the ship's system.
+
+#### Challenge #6
+"NAVIGATION SYSTEM needed," LARRY tells you. Navigation is important - you can't move through space without it!
+
+Use your already-defined methods and load in the "navigation" module. It's pretty simple once you have the functions to do it, and LARRY's eyes are finally easing from red back to normal.
+
+#### Challenge #7
+You look over at LARRY, expecting him to quack out his next prompt, but it seems LARRY is now the one malfunctioning! You open up the manual, and find the section on LARRY. Apparently, loading modules can sometimes cause LARRY to get stuck in an infinite loop.
+
+You can fix him, you'll just need to write some code! Write and call a function called resetLARRY() which will prompt LARRY to quack ten times so he breaks out of his loop.
+
+There is a function called LARRY.quack() that you can use in your code.
+
+#### Challenge #8
+The little duck-shaped robot shudders back and forth for a moment, and his eyes flash as he releases a barrage of ten quacks. "Thank you!" he exclaims.
+
+"COMMUNICATION MODULE NEEDED," LARRY blares suddenly. He repeats it twice more - he’s rather insistent! Luckily, you've got the code for this. Load the module called "communication" using findModuleIndex() and loadModule() from before.
