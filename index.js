@@ -35,6 +35,10 @@ function resetLARRY() { //Call the LARRY.quack method 10 times to reset Larry. (
   console.log(`Larry is now reset.`);
 }
 
+function setMessage() { //(Day #9)
+  radio.message = JSON.stringify(navigation);
+}
+
 powerOn(); //Sets ship.powerOn to true. Day #1.
 //countModules(); Counts number of items in availableModules. Day #2.
 countEssential(); //Counts number of items with the Essential flag. Day #3.
@@ -43,3 +47,4 @@ loadModule(findModuleIndex("propulsion")); //Enables propulsion and adds to ship
 loadModule(findModuleIndex("navigation")); //Enables navigation and adds to ship's modules array. Day #6
 resetLARRY(); //Reset Larry. Day #7.
 loadModule(findModuleIndex("communication")); //Enables communication and adds to ship's modules array. Day #8
+setMessage(); //Day #9
