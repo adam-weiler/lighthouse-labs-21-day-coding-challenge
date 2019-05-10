@@ -35,8 +35,12 @@ function resetLARRY() { //Call the LARRY.quack method 10 times to reset Larry. (
   console.log(`Larry is now reset.`);
 }
 
-function setMessage() { //(Day #9)
+function setMessage() { //Sets radio object's message property to the JSON version of the navigation object. (Day #9)
   radio.message = JSON.stringify(navigation);
+}
+
+function activateBeacon() { //Set radio object's beacon property to true. (Day #10)
+  radio.beacon = true;
 }
 
 powerOn(); //Sets ship.powerOn to true. Day #1.
@@ -47,4 +51,5 @@ loadModule(findModuleIndex("propulsion")); //Enables propulsion and adds to ship
 loadModule(findModuleIndex("navigation")); //Enables navigation and adds to ship's modules array. Day #6
 resetLARRY(); //Reset Larry. Day #7.
 loadModule(findModuleIndex("communication")); //Enables communication and adds to ship's modules array. Day #8
-setMessage(); //Day #9
+setMessage(); //Sets radio.message to JSON version of navigation. Day #9
+activateBeacon(); //Sets radio.beacon to true. Day #10
