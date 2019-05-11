@@ -43,6 +43,10 @@ function activateBeacon() { //Set radio object's beacon property to true. (Day #
   radio.beacon = true;
 }
 
+function setFrequency() { //(Day #11)
+  radio.frequency = (radio.range.low + radio.range.high) / 2;
+}
+
 powerOn(); //Sets ship.powerOn to true. Day #1.
 //countModules(); Counts number of items in availableModules. Day #2.
 countEssential(); //Counts number of items with the Essential flag. Day #3.
@@ -53,3 +57,4 @@ resetLARRY(); //Reset Larry. Day #7.
 loadModule(findModuleIndex("communication")); //Enables communication and adds to ship's modules array. Day #8
 setMessage(); //Sets radio.message to JSON version of navigation. Day #9
 activateBeacon(); //Sets radio.beacon to true. Day #10
+//setFrenecy(); //Day #11
