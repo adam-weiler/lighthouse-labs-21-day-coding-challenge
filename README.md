@@ -339,24 +339,30 @@ https://coding-challenge.lighthouselabs.ca
 
   "Navigation system not calibrated! Three calibrations needed! QUAAACK!" There goes LARRY again, trying to help. Another browse through the nav system's documentation shows that each axis (x, y, and z) needs to be calibrated, and each requires a different calibration. Looks like you'll be writing plenty of JavaScript for this!
 
-  To start, let's focus on calibrating just the x-axis. The x-axis has 12 possible settings and you'll need to write some code to find the right one. Start by writing a function called calibrateX(). There are a lot of steps involved in this one, luckily your manual has great documentation instructing that your function needs to:
+  To start, let's focus on calibrating just the x-axis. The x-axis has 12 possible settings and you'll need to write some code to find the right one. Start by writing a function called **calibrateX()**. There are a lot of steps involved in this one, luckily your manual has great documentation instructing that your function needs to:
 
-  Loop from 1 - 12
-  Call the built-in checkSignal() function each time, and assign the result to a variable called signal
-  Make sure your signal variable is not undefined
-  If the value is defined, set the navigation object's x property to that value
-  Break out of the loop!
-  Don't forget to call your calibrateX() function to activate it!
+  * Loop from 1 - 12
+  
+  * Call the built-in **checkSignal()** function each time, and assign the result to a variable called **signal**
+  
+  * Make sure your **signal** variable is not **undefined**
+  
+  * If the value is defined, set the navigation object's x property to that value
+  
+  * Break out of the loop!
+  
+  Don't forget to call your **calibrateX()** function to activate it!
 </details>
 
 <details>
   <summary>Hint</summary>
   
-  There are a few pieces that need to be put together to accomplish this challenge. Fortunately most of them are concepts we already know! You're going to want start by writing a for loop or a while loop that loops 12 times.
+  There are a few pieces that need to be put together to accomplish this challenge. Fortunately most of them are concepts we already know! You're going to want start by writing a **for** loop or a **while** loop that loops 12 times.
 
-  This is another case where the function you need to use inside yours has already been built for you. Each time you run your loop, call checkSignal(). You should assign the result of this function to a variable, it should look something like this var response = doSomething()
+  This is another case where the function you need to use inside yours has already been built for you. Each time you run your loop, call **checkSignal()**. You should assign the result of this function to a variable, it should look something like this
+  **var response = doSomething()**
 
-  The checkSignal() function returns a value that is either a number or undefined. Since you're looking for a number you'll need to check to make sure the result of checkSignal() is not undefined. Here is a resource that can help guide you on how to check if a value is not undefined.
+  The **checkSignal()** function returns a value that is either a number or **undefined**. Since you're looking for a number you'll need to check to make sure the result of **checkSignal()** is *not* undefined. [Here is a resource](https://flaviocopes.com/how-to-check-undefined-property-javascript/) that can help guide you on how to check if a value is not **undefined**.
 </details>
 
 
@@ -367,7 +373,7 @@ https://coding-challenge.lighthouselabs.ca
   
   "X Calibrated!" LARRY quacks happily. "Y and Z need calibration now! QUACK!"
 
-  Let's write calibrateY() and calibrateZ(). The manual says you'll need to loop from 1 to 60, and again you have to call checkSignal() each time.
+  Let's write **calibrateY()** and **calibrateZ()**. The manual says you'll need to loop from 1 to 60, and again you have to call **checkSignal()** each time.
 </details>
 
 <details>
@@ -382,15 +388,15 @@ https://coding-challenge.lighthouselabs.ca
 <details>
   <summary>Instructions</summary>
   
-  "One-step calibration needed," LARRY quacks. The last page of the calibration manual says that for proper calibration, you need to write a function called calibrate() which the nav system can call anytime it wants, which will calibrate your X, Y, and Z axes. The good news is, you’ve already done the hard part. Write one function called calibrate() which will call your other three functions in it, one after the other.
+  "One-step calibration needed," LARRY quacks. The last page of the calibration manual says that for proper calibration, you need to write a function called **calibrate()** which the nav system can call anytime it wants, which will calibrate your X, Y, and Z axes. The good news is, you’ve already done the hard part. Write one function called **calibrate()** which will call your other three functions in it, one after the other.
 
-You don't need call the calibrate() function yourself, but don't forget to remove the other calibrateX, calibrateY and calibrateZ calls you already wrote
+You don't need call the **calibrate()** function yourself, but don't forget to remove the other calibrateX, calibrateY and calibrateZ calls you already wrote
 </details>
 
 <details>
   <summary>Hint</summary>
   
-  It doesn't matter which order you call calibrateX(), calibrateY(), and calibrateZ(), but you must do all three of them inside the calibrate() method.
+  It doesn't matter which order you call **calibrateX()**, **calibrateY()**, and **calibrateZ()**, but you must do all three of them inside the **calibrate()** method.
 
   This is a process we call 'abstraction' and 'automation'. Writing a function that calls other functions we have already written allows us to automate several steps we've built. You've already written the three calibration functions, call them one after the other.
 </details>
@@ -403,9 +409,9 @@ You don't need call the calibrate() function yourself, but don't forget to remov
   
   "QUACK propulsion module needs to make us go!" LARRY points his bill at the ship’s command center, where the navigation system speed is set to "raaaaid".
 
-  That clearly isn't correct - speed needs to be a non-negative integer.
+  That clearly isn't correct - speed needs to be a *non-negative* integer.
 
-  Write a function called setSpeed(speed) which will take in a string as a parameter, and set the speed in the navigation object (see globals above) to an integer.
+  Write a function called **setSpeed(speed)** which will take in a **string** as a parameter, and set the speed in the navigation object (see globals above) to an **integer**.
 
   Luckily the propulsion module lets us know the speed it needs to be set at, so you don't need to call this function yourself
 </details>
@@ -413,9 +419,9 @@ You don't need call the calibrate() function yourself, but don't forget to remov
 <details>
   <summary>Hint</summary>
   
-  Make sure your function won't allow the speed to be negative. If a negative number is passed, it should leave the speed as is.
+  Make sure your function won't allow the **speed** to be negative. If a negative number is passed, it should leave the speed as is.
 
-  Remember that when you build the setSpeed() function it is taking a parameter. You also need to remember that the given parameter is in the form of a string (behind the scenes, calling the function looks like setSpeed("12")), and you must convert it to an integer. Luckily JavaScript has another handy built-in method called parseInt() for this
+  Remember that when you build the **setSpeed()** function it is taking a parameter. You also need to remember that the given parameter is in the form of a string (behind the scenes, calling the function looks like **setSpeed("12")**), and you must convert it to an integer. Luckily JavaScript has another handy built-in method called [parseInt()](https://www.geeksforgeeks.org/javascript-parseint-with-examples/) for this
 </details>
 
 
@@ -426,7 +432,7 @@ You don't need call the calibrate() function yourself, but don't forget to remov
   
   "QUACK time to set the ship antenna to active." The ship has a pretty rich configuration object, with the power and modules and a nested object for the antenna's status.
 
-Write a function called activateAntenna() which will set the active property on the antenna to true. You’ve worked with object sub-properties before when you set the radio frequency (you can see the ship object in the Global Objects list above), remember how to access them?
+Write a function called **activateAntenna()** which will set the **active** property on the antenna to true. You’ve worked with object sub-properties before when you set the radio frequency (you can see the ship object in the Global Objects list above), remember how to access them?
 
 Your antenna is a bit out of date, so it doesn't activate automatically. Make sure to call your function to activate it!
 </details>
@@ -434,7 +440,7 @@ Your antenna is a bit out of date, so it doesn't activate automatically. Make su
 <details>
   <summary>Hint</summary>
   
-  So this looks just like another property setting on an object. But this object is inside another object. In this case, the outer object has a property on it, and the value of that property is an object. You can chain property lookups. Just a reminder, Digital Ocean has a great tutorial on Adding and Modifying object properties.
+  So this looks just like another property setting on an object. But this object is inside another object. In this case, the outer object has a property on it, and the value of that property is an object. You can chain property lookups. Just a reminder, Digital Ocean has a great tutorial on [Adding and Modifying](https://www.digitalocean.com/community/tutorials/understanding-objects-in-javascript#adding-and-modifying-object-properties) object properties.
 </details>
 
 
@@ -447,15 +453,15 @@ Your antenna is a bit out of date, so it doesn't activate automatically. Make su
 
   Now that the power is back on, you should try the radio by sending out a beacon message so Earth knows where you are.
 
-  Create a new function called sendBroadcast(). In this function you'll need to write a loop to call the newly-enabled broadcast() function 100 times - you want to make sure Earth gets the message! Don't worry what broadcast() does; it's built into the ship's computer.
+  Create a new function called **sendBroadcast()**. In this function you'll need to write a loop to call the newly-enabled **broadcast()** function 100 times - you want to make sure Earth gets the message! Don't worry what **broadcast()** does; it's built into the ship's computer.
 
-  When you're ready to send your broadcast out, be sure to call your sendBroadcast() function
+  When you're ready to send your broadcast out, be sure to call your **sendBroadcast()** function
 </details>
 
 <details>
   <summary>Hint</summary>
   
-  Another function we've provided for you! We here at the SpaceshipCompany™ are really helpful after all. Write a loop that runs 100 times, and calls broadcast() each time.
+  Another function we've provided for you! We here at the SpaceshipCompany™ are really helpful after all. Write a loop that runs 100 times, and calls **broadcast()** each time.
 </details>
 
 
@@ -464,14 +470,17 @@ Your antenna is a bit out of date, so it doesn't activate automatically. Make su
 <details>
   <summary>Instructions</summary>
   
-  Wait a second! It looks like your message isn't making it all the way to Earth. Another look at the radio manual and you realize you must configure the radio before sending your broadcast. Write and call a function called configureBroadcast() which will get the broadcast to Earth.
+  Wait a second! It looks like your message isn't making it all the way to Earth. Another look at the radio manual and you realize you must configure the radio before sending your broadcast. Write and call a function called **configureBroadcast()** which will get the broadcast to Earth.
 
   Your function will need to follow a precise order:
 
-  set the frequency on the radio
-  set the antenna to active
-  send your announcement
-  You've already written all the code to complete this challenge with a few minor tweaks you'll be phoning home in no time. Unfortunately this requires manual configuration, so you'll need to call your configureBroadcast() function to kick things off
+  * set the frequency on the radio
+  
+  * set the antenna to active
+  
+  * send your announcement
+  
+  You've already written all the code to complete this challenge with a few minor tweaks you'll be phoning home in no time. Unfortunately this requires manual configuration, so you'll need to call your **configureBroadcast()** function to kick things off
 
   PS. Remember to disable your previous frequency, antenna and announcement function calls as they were out of order!
 </details>
@@ -479,7 +488,7 @@ Your antenna is a bit out of date, so it doesn't activate automatically. Make su
 <details>
   <summary>Hint</summary>
   
-  Do you remember when you wrote the calibrate() method that automated and abstracted your three individual calibration functions? This is very much the same. Call the function to set the radio frequency, to send your broadcast 100 times, and set the antenna to active. Make sure you do them in the right order!
+  Do you remember when you wrote the **calibrate()** method that automated and abstracted your three individual calibration functions? This is very much the same. Call the function to set the radio frequency, to send your broadcast 100 times, and set the antenna to active. Make sure you do them in the right order!
 
   Make sure you aren't calling these functions more than once. Check the rest of your code to be sure
 </details>
@@ -492,19 +501,21 @@ Your antenna is a bit out of date, so it doesn't activate automatically. Make su
   
   Success! Earth has received your message and it looks like they are trying to send something back in return
 
-  "th1s 1s 4 t3st. th1s 1s 0nl5 4 t3st. 1f th1s w3r3 4 r34l m3ss4g3, 502 w021d g3t s0m3th1ng m34n1ngf2l." This message chatters out of the radio.
+  *"th1s 1s 4 t3st. th1s 1s 0nl5 4 t3st. 1f th1s w3r3 4 r34l m3ss4g3, 502 w021d g3t s0m3th1ng m34n1ngf2l."* This message chatters out of the radio.
 
   After staring at the message for a while, you aren't quite sure what they are trying to say.
 
   "VOWELS ERROR!" LARRY tells you. VOWELS ERROR? What is that? "My QUACK current operating system cannot process vowels, so I've replaced them all with numbers".
 
-  Write a function called decodeMessage(message). This function takes in a coded message and changes all the numbers back to their respective vowels before returning the newly decoded message.
+  Write a function called **decodeMessage(message)**. This function takes in a coded message and changes all the numbers back to their respective vowels before returning the newly decoded message.
 
   This function is much more complicated than what you have had to build until now, and there are multiple ways you could solve this, so you head to your manual to see what it says about decoding messages. The manual suggests you should read about:
 
-  Splitting a string into an array of characters using message.split(''). Read more here
-  Joining an array of characters back into a string using message.join(''). Read more here
-  Take a look at the hints if you need more help
+  * Splitting a string into an array of characters using **message.split('')**. Read more [here](https://www.w3schools.com/jsref/jsref_split.asp)
+  
+  * Joining an array of characters back into a string using **message.join('')**. Read more [here](https://www.w3schools.com/jsref/jsref_join.asp)
+  
+  Take a look at the *hints* if you need more help
 
   Your decoder is automatic, so no need to call this function
 </details>
@@ -516,11 +527,13 @@ Your antenna is a bit out of date, so it doesn't activate automatically. Make su
 
   Once you've determined that. There are a few ways you can decode the message from Earth. One solution would be to:
 
-  Split the message into an array of characters using the message.split('') method
-  Loop through each character in the array and if the character is a stringified number (remember to compare to "0" instead of 0), set it to the corresponding vowel. You can read about If/Else If/Else statements if you need help
-  Join the array of characters back into a string and return your newly decoded message
+  * Split the message into an array of characters using the **message.split('')** method
+  
+  * Loop through each character in the array and if the character is a stringified number (remember to compare to "0" instead of 0), set it to the corresponding vowel. You can read about [https://www.w3schools.com/js/js_if_else.asp](If/Else If/Else) statements if you need help
+  
+  * Join the array of characters back into a string and return your newly decoded message
 
-  PS. if you want to be cheeky, you can also checkout JavaScript's handy built in .replace() method that searches a string for a specified value, or a regular expression, and returns a new string where the specified values are replaced. You can find out more about it here
+  PS. if you want to be cheeky, you can also checkout JavaScript's handy built in **.replace()** method that searches a string for a specified value, or a regular expression, and returns a new string where the specified values are replaced. You can find out more about it [here](https://alligator.io/js/string-replace/)
 </details>
 
 
@@ -529,14 +542,19 @@ Your antenna is a bit out of date, so it doesn't activate automatically. Make su
 <details>
   <summary>Instructions</summary>
   
-  "Let's QUACK head for home!" LARRY states anxiously. However, you realize quickly that the x, y and z coordinates you've set in your navigation object won't get you precisely to Earth. You need to confirm with your home base before resetting the nagivation's x, y and z coordinates. It looks like you'll need to write a function called returnToEarth(). This function is a bit complicated, so you ask LARRY to walk you through it. LARRY responds, quacking that your function should:
+  "Let's QUACK head for home!" LARRY states anxiously. However, you realize quickly that the x, y and z coordinates you've set in your **navigation** object won't get you precisely to Earth. You need to confirm with your home base before resetting the nagivation's x, y and z coordinates. It looks like you'll need to write a function called **returnToEarth()**. This function is a bit complicated, so you ask LARRY to walk you through it. LARRY responds, quacking that your function should:
 
-  Call the built-in broadcast() function three times. Each of these calls should pass either "x", "y" or "z" as a parameter.
-  Store the response from each broadcast() call in it's own variable (The broadcast() function returns a coded-message from Earth with the correct coordinate to return home in HEX! Check out the hints for more on this)
-  Decode the returned message using the decodeMessage() function you wrote earlier
-  Change the decoded hex-coordinate to an integer using parseInt()
-  Set each of the navigation object's x, y and z parameters to the integer coordinates
-  Call your returnToEarth() and head for home. "QUACK" shouts LARRY one final time "That's one small step for ducks and a giant leap for duck-kind." Mission complete.
+  * Call the built-in **broadcast()** function three times. Each of these calls should pass either "x", "y" or "z" as a parameter.
+  
+    * Store the response from each **broadcast()** call in it's own variable (The **broadcast()** function returns a coded-message from Earth with the correct coordinate to return home in [HEX](https://whatis.techtarget.com/definition/hexadecimal)! Check out the *hints* for more on this)
+  
+  * Decode the returned message using the **decodeMessage()** function you wrote earlier
+  
+  * Change the decoded hex-coordinate to an integer using [parseInt()](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
+  
+  * Set each of the **navigation** object's x, y and z parameters to the integer coordinates
+  
+  Call your **returnToEarth()** and head for home. "QUACK" shouts LARRY one final time "That's one small step for ducks and a giant leap for duck-kind." Mission complete.
 </details>
 
 <details>
@@ -544,16 +562,34 @@ Your antenna is a bit out of date, so it doesn't activate automatically. Make su
   
   You need ask LARRY for more guidance on this one, it's a lot of steps to go through. Luckily LARRY is happy to help in the hints below!
 
-  To get started, you'll need to make three individual calls to the broadcast() function like so:
+  To get started, you'll need to make three *individual* calls to the **broadcast()** function like so:
 
-  broadcast("x")
-  broadcast("y")
-  broadcast("z")
-  You'll need to save the response from each of these calls into it's own variable, that you can then pass to your decodeMessage() function
+  * **broadcast("x")**
+  
+  * **broadcast("y")**
+  
+  * **broadcast("z")**
+  
+  You'll need to save the response from each of these calls into it's own variable, that you can then pass to your **decodeMessage()** function
 
-  Don't forget the response from broadcast() is a hexidecimal! You'll need to pass it through parseInt() like so parseInt(decodedmessage, base) with a second parameter as shown. You'll want to Google hex base parseInt to determine what number to pass as the base
+  Don't forget the response from **broadcast()** is a [hexidecimal](https://whatis.techtarget.com/definition/hexadecimal)! You'll need to pass it through **parseInt()** like so **parseInt(decodedmessage, base)** with a second parameter as shown. You'll want to Google *hex base parseInt* to determine what number to pass as the base
 
   And after all of that, set the navigation objects coordinates, and head back down to Earth!
+</details>
+
+
+
+#### Challenge Complete
+<details>
+  <summary>Conclusion</summary>
+  
+  [Wow image](https://coding-challenge.lighthouselabs.ca/img/wow.gif)
+  
+  Congratulations on completing the 21-Day Coding Challenge! 
+  
+  Check your email. 😉 
+
+  Now that coding is a daily habit, are you interested in learning more? Check out our [How to Learn to Code article](https://www.lighthouselabs.ca/blog/how-to-learn-to-code-a-comprehensive-guide), where we have a compiled a ton of (mostly free) resources where you can improve your coding. Want to do this for a living? Our Web Development Bootcamp is built for people who want to transition into a career in web development. Explore this and our other programs here.
 </details>
 
 
