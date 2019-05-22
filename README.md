@@ -529,7 +529,7 @@ Your antenna is a bit out of date, so it doesn't activate automatically. Make su
 
   * Split the message into an array of characters using the **message.split('')** method
   
-  * Loop through each character in the array and if the character is a stringified number (remember to compare to "0" instead of 0), set it to the corresponding vowel. You can read about [https://www.w3schools.com/js/js_if_else.asp](If/Else If/Else) statements if you need help
+  * Loop through each character in the array and if the character is a stringified number (remember to compare to "0" instead of 0), set it to the corresponding vowel. You can read about [If/Else If/Else](https://www.w3schools.com/js/js_if_else.asp)statements if you need help
   
   * Join the array of characters back into a string and return your newly decoded message
 
@@ -600,28 +600,28 @@ Your antenna is a bit out of date, so it doesn't activate automatically. Make su
   
   There are a few objects you're going to be working with and their initial values. This is only a subset of them, to give you a idea of what they look like. You can see below that they're all messed up:
 
-  var navigation = {
-    x: -2,
-    y: 4,
-    z: 7,
-    speed: "raaaaid"
-  };
+    var navigation = {
+      x: -2,
+      y: 4,
+      z: 7,
+        speed: "raaaaid"
+    };
 
-  var ship = {
-    powerOn: false,
-    modules: [],
-    antenna: {
-      active: false
-    }
-  };
+    var ship = {
+      powerOn: false,
+      modules: [],
+      antenna: {
+        active: false
+      }
+    };
 
-  var radio = {
-    range: {
-      low: 88,
-      high: 108,
-    },
-    frequency: 0,
-    message: "Bugs are cool.",
-    beacon: false
-  };
+    var radio = {
+      range: {
+        low: 88,
+        high: 108,
+      },
+      frequency: 0,
+      message: "Bugs are cool.",
+      beacon: false
+    };
 </details>
