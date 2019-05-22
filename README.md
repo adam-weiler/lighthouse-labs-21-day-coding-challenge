@@ -26,13 +26,14 @@ https://coding-challenge.lighthouselabs.ca
   This challenge is about creating a *Function* and working with an *Object Property* in JavaScript.
 
   *On Functions:*
-
-  How to define functions in JavaScript
-  CodeCademy tutorial on Functions
-
+  
+  [How to define functions in JavaScript](https://www.digitalocean.com/community/tutorials/how-to-define-functions-in-javascript)
+   
+  [CodeCademy tutorial on Functions](https://www.codecademy.com/courses/learn-javascript/lessons/functions/exercises/intro-to-functions)
+  
   *On Object Properties*
 
-  Digital Ocean's tutorial on modifying object properties.
+  [Digital Ocean](https://www.digitalocean.com/community/tutorials/understanding-objects-in-javascript#adding-and-modifying-object-properties)'s tutorial on modifying object properties.
 
   You can set values in JavaScript using a single equals sign."
 
@@ -67,9 +68,11 @@ https://coding-challenge.lighthouselabs.ca
   
   While there's a lot of information about the module here, the simple challenge is to find out how many modules there are. They're stored in an array, and what we need is to find out how long the array is. Check out these resources:
 
-  Here are some Digital Ocean tutorials on Understanding Arrays in JavaScript
-  You can also work with arrays on CodeCademy
-  Khan Academy also has some good exercises that you can do here
+  Here are some Digital Ocean tutorials on [Understanding Arrays in JavaScript](https://www.digitalocean.com/community/tutorials/understanding-arrays-in-javascript)
+  
+  You can also work with arrays on [CodeCademy](https://www.codecademy.com/courses/learn-javascript/lessons/arrays/exercises/arrays)
+  
+  Khan Academy also has some good exercises that you can do [here](https://www.khanacademy.org/computing/computer-programming/programming/arrays/pt/intro-to-arrays)
 </details>
 
 
@@ -90,9 +93,9 @@ https://coding-challenge.lighthouselabs.ca
 
   Here's some resources on looping:
 
-  * Learn about Looping
+  * [Learn about Looping](https://www.digitalocean.com/community/tutorials/how-to-construct-for-loops-in-javascript)
   
-  * You can also check out CodeCademy
+  * You can also check out [CodeCademy](https://www.codecademy.com/courses/learn-javascript/lessons/loops/exercises/loops)
 </details>
 
 
@@ -135,11 +138,10 @@ https://coding-challenge.lighthouselabs.ca
   
   The first steps are easy, because you just need to access the **availableModules** array with the index, using the [] notation and use a conditional to check if it's an essential module.
 
-  For the second step, use the same strategy you used to turn the power on in Challenge #1. The last step uses a method called **.push()**. You can read up on how array pushing works **here**.
+  For the second step, use the same strategy you used to turn the power on in Challenge #1. The last step uses a method called **.push()**. You can read up on how array pushing works [here](https://www.digitalocean.com/community/tutorials/how-to-use-array-methods-in-javascript-mutator-methods#push()).
 
   Also, don't forget to use your **loopModule()** function to find the index of the **life-support** module. You'll need to pass this index as a parameter to your your **loadModule()** function to activate it!
 </details>
-
 
 
 
@@ -205,7 +207,7 @@ https://coding-challenge.lighthouselabs.ca
 <details>
   <summary>Hint</summary>
   
-  Okay, the hint here is that we have given you the method you need to make Larry quack. You just need to make a loop. This loop needs to run ten times, calling the **LARRY.quack()** method we've given you. Here is the material on loops again on **Digital Ocean**.
+  Okay, the hint here is that we have given you the method you need to make Larry quack. You just need to make a loop. This loop needs to run ten times, calling the **LARRY.quack()** method we've given you. Here is the material on loops again on [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-construct-for-loops-in-javascript).
 </details>
 
 
@@ -230,7 +232,7 @@ https://coding-challenge.lighthouselabs.ca
 <details>
   <summary>Hint</summary>
   
-  You have most of the code in place to complete this challenge already. But we recommend using a conditional statement in your **loadModule()** function that will set the **essential** flag to true. You can read more about if else statements and how to implement them **here**
+  You have most of the code in place to complete this challenge already. But we recommend using a conditional statement in your **loadModule()** function that will set the **essential** flag to true. You can read more about if else statements and how to implement them [here](https://www.w3schools.com/js/js_if_else.asp)
 </details>
 
 
@@ -249,15 +251,16 @@ https://coding-challenge.lighthouselabs.ca
 <details>
   <summary>Hint</summary>
   
-  Looks like we've got to make a couple of steps now to get going. You can **read the docs** here on how to turn a JavaScript object into a string using **JSON.stringify**. There are some good examples there for you.
+  Looks like we've got to make a couple of steps now to get going. You can [read the docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) here on how to turn a JavaScript object into a string using **JSON.stringify**. There are some good examples there for you.
 
   Think about the order of things you need to do:
 
-  Make a new function called **setMessage()**
-  Within that function, you need to access the **message** property of the **radio** object (Remember you can do this using the '.' operator)
-  Then you need to make sure you are setting **message** property to the *JSON* version of the **navigation** object
+  * Make a new function called **setMessage()**
+  
+  * Within that function, you need to access the **message** property of the **radio** object (Remember you can do this using the '.' operator)
+  
+  * Then you need to make sure you are setting **message** property to the *JSON* version of the **navigation** object
 </details>
-
 
 
 
@@ -278,7 +281,6 @@ https://coding-challenge.lighthouselabs.ca
 
 
 
-
 #### Challenge #11
 <details>
   <summary>Instructions</summary>
@@ -289,9 +291,9 @@ https://coding-challenge.lighthouselabs.ca
 
   LARRY's prompt sends you back to the ship's manual, where you find an entire section about the radio. You notice that the radio has a feature you missed before, the range! Your particular radio has a range of 88 to 108 MHz, much like the FM radio in your car back on Earth. There's a note in the manual that says that the radio should be tuned to the same frequency as the lower end plus the upper end, and that total divided by two.
 
-  Write a function called setFrequency() that will set the frequency property on the radio object using the above formula.
+  Write a function called **setFrequency()** that will set the **frequency** property on the **radio** object using the above formula.
 
-  Be careful because not all radios will have the same range, so make sure your code is reuseable. Instead of coding the numbers directly into your equation use dot notation to access them from the radio object, which you can see by clicking the Show Global Objects link above.
+  Be careful because not all radios will have the same range, so make sure your code is reuseable. Instead of coding the numbers directly into your equation use dot notation to access them from the radio object, which you can see by clicking the *Show Global Objects* link <below>.
 </details>
 
 <details>
@@ -301,14 +303,10 @@ https://coding-challenge.lighthouselabs.ca
 
   This time, you're going to have to do some math. A lot of people think that programming is about math, but we've done ten challenges without having to really do any. In this case, take the top end of the frequencies, and the bottom end and add them together. That number divided by two is the number you need to set the radio frequency to.
 
-  Here is a tutorial on Math operators from Digital Ocean.
+  Here is a tutorial on [Math operators](https://www.digitalocean.com/community/tutorials/how-to-do-math-in-javascript-with-operators) from Digital Ocean.
 
-  The range property is also an object. Remember that the sub-properties of objects can be accessed by chaining together the dot or bracket notation
+  The range property is also an object. Remember that the sub-properties of objects can be accessed by chaining together the [dot or bracket notation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors)
 </details>
-
-
-
-
 
 
 
@@ -320,20 +318,16 @@ https://coding-challenge.lighthouselabs.ca
 
   You quickly check the documentation for the navigation system and find out that the nav system's initialization sequence needs three values, because you are in three-dimensional space. It needs an X, Y, and Z value.
 
-  Your next task is to write a function called initialize() which will set the x, y, and z values correctly to start off at 0 in the navigation system. For example, the navigation system's x value is navigation.x.
+  Your next task is to write a function called **initialize()** which will set the x, y, and z values correctly to start off at 0 in the navigation system. For example, the navigation system's x value is **navigation.x**.
 
-  Don't worry about calling your initialize() function, this one runs automatically
+  Don't worry about calling your **initialize()** function, this one runs automatically
 </details>
 
 <details>
   <summary>Hint</summary>
   
-  More functions, more property setting. If you look at the current values on the navigation module, they are definitely not set correctly. Let's get them all set to 0.
+  More functions, more property setting. If you look at the current values on the **navigation** module, they are definitely not set correctly. Let's get them all set to **0**.
 </details>
-
-
-
-
 
 
 
@@ -367,8 +361,6 @@ https://coding-challenge.lighthouselabs.ca
 
 
 
-
-
 #### Challenge #14
 <details>
   <summary>Instructions</summary>
@@ -383,9 +375,6 @@ https://coding-challenge.lighthouselabs.ca
   
   Take everything you did for the last challenge and re-do it for Y and Z, but don't forget to increase the for loop size and to call the calibrateX, calibrateY and calibrateZ functions in order!
 </details>
-
-
-
 
 
 
@@ -405,9 +394,6 @@ You don't need call the calibrate() function yourself, but don't forget to remov
 
   This is a process we call 'abstraction' and 'automation'. Writing a function that calls other functions we have already written allows us to automate several steps we've built. You've already written the three calibration functions, call them one after the other.
 </details>
-
-
-
 
 
 
@@ -434,9 +420,6 @@ You don't need call the calibrate() function yourself, but don't forget to remov
 
 
 
-
-
-
 #### Challenge #17
 <details>
   <summary>Instructions</summary>
@@ -453,8 +436,6 @@ Your antenna is a bit out of date, so it doesn't activate automatically. Make su
   
   So this looks just like another property setting on an object. But this object is inside another object. In this case, the outer object has a property on it, and the value of that property is an object. You can chain property lookups. Just a reminder, Digital Ocean has a great tutorial on Adding and Modifying object properties.
 </details>
-
-
 
 
 
@@ -476,9 +457,6 @@ Your antenna is a bit out of date, so it doesn't activate automatically. Make su
   
   Another function we've provided for you! We here at the SpaceshipCompany™ are really helpful after all. Write a loop that runs 100 times, and calls broadcast() each time.
 </details>
-
-
-
 
 
 
@@ -505,11 +483,6 @@ Your antenna is a bit out of date, so it doesn't activate automatically. Make su
 
   Make sure you aren't calling these functions more than once. Check the rest of your code to be sure
 </details>
-
-
-
-
-
 
 
 
@@ -552,10 +525,6 @@ Your antenna is a bit out of date, so it doesn't activate automatically. Make su
 
 
 
-
-
-
-
 #### Challenge #21
 <details>
   <summary>Instructions</summary>
@@ -586,8 +555,6 @@ Your antenna is a bit out of date, so it doesn't activate automatically. Make su
 
   And after all of that, set the navigation objects coordinates, and head back down to Earth!
 </details>
-
-
 
 
 
