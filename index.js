@@ -63,8 +63,8 @@ function initialize() { //Sets each of the navigation object's properties to 0. 
 function calibrateX() { //Sets the navigation object's x property to a value stored in invisible checkSignal function. (Day #13)
   let signal;
 
-  for (let x = 1; x <= 12; x++) {
-    console.log(x);
+  for (let i = 1; i <= 12; i++) {
+    console.log(`Current Iteration: ` + i);
     signal = checkSignal();
     
     if (signal !== undefined) {
@@ -75,9 +75,86 @@ function calibrateX() { //Sets the navigation object's x property to a value sto
   console.log(`calibrateX() - signal: ${signal}`);
 }
 
+function calibrateY() { //Sets the navigation object's y property to a value stored in invisible checkSignal function. (Day #14)
+  let signal;
+
+  for (let i = 1; i <= 60; i++) {
+    console.log(`Current Iteration: ` + i);
+    signal = checkSignal();
+    
+    if (signal !== undefined) {
+      navigation.y = signal;
+      break;
+    }
+  }
+  console.log(`calibrateY() - signal: ${signal}`);
+}
+
+function calibrateZ() { //Sets the navigation object's z property to a value stored in invisible checkSignal function. (Day #14)
+  let signal;
+
+  for (let i = 1; i <= 60; i++) {
+    console.log(`Current Iteration: ` + i);
+    signal = checkSignal();
+    
+    if (signal !== undefined) {
+      navigation.z = signal;
+      break;
+    }
+  }
+  console.log(`calibrateZ() - signal: ${signal}`);
+}
+
+function calibrate() { //Calibrates the navigation object by calling the x, y, z functions. (Day #15)
+  calibrateX(); //Sets navigation's x value from the invisible checkSignal function. Day #13
+  calibrateY(); //Sets navigation's y value from the invisible checkSignal function. Day #14
+  calibrateZ(); //Sets navigation's z value from the invisible checkSignal function. Day #14
+}
+
+
+function setSpeed(speed) { //Tries to set the navigation object's speed to a positive number. (Day #16)
+  let s = parseInt(speed);
+  
+  if (s >= 0) {
+      navigation.speed = s;
+  }
+}
+
+function activateAntenna() { //Activate the ship object's property antenna, the antenna object's property active to true.(Day #17)
+  ship.antenna.active = true;
+}
+
+function sendBroadcast() { // (Day #18)
+  console.log(`sendBroadcast() \n`);
+  for (let i = 1; i <= 100; i++) {
+    broadcast();
+  }
+}
+
+function configureBroadcast() { // (Day #19)
+  setFrequency(); //Sets radio's frequency to average of two numbers. Day #11.
+  activateAntenna(); //Sets ship's antenna's active to true. Day #17.
+  sendBroadcast(); //Day #18.
+}
+
+function decodeMessage(message) { // (Day #20)
+  return message.replace(/4/g, 'a').replace(/3/g, 'e').replace(/1/g, 'i').replace(/0/g, 'o').replace(/2/g, 'u').replace(/5/g, 'y');
+}
+
+function returnToEarth() {
+  console.log(`returnToEarth() \n`);
+  let broadcast_x = broadcast('x');
+  let broadcast_y = broadcast('y');
+  let broadcast_z = broadcast('z');
+  
+  navigation.x = parseInt(decodeMessage(broadcast_x), 16);
+  navigation.y = parseInt(decodeMessage(broadcast_y), 16);
+  navigation.z = parseInt(decodeMessage(broadcast_z), 16);
+}
+
 
 powerOn(); //Sets ship.powerOn to true. Day #1.
-//countModules(); Counts number of items in availableModules. Day #2.
+// countModules(); Counts number of items in availableModules. Day #2.
 countEssential(); //Counts number of items with the Essential flag. Day #3.
 loadModule(findModuleIndex("life-support")); //Enables life support and adds to ship's modules array. Day #4.
 loadModule(findModuleIndex("propulsion")); //Enables propulsion and adds to ship's modules array. Day #5.
@@ -86,6 +163,14 @@ resetLARRY(); //Reset Larry. Day #7.
 loadModule(findModuleIndex("communication")); //Enables communication and adds to ship's modules array. Day #8.
 setMessage(); //Sets radio's message to JSON version of navigation. Day #9.
 activateBeacon(); //Sets radio's beacon to true. Day #10.
-//setFrequency(); //Sets radio's frequency to average of two numbers. Day #11
-//initialize(); //Sets navigation's x, y, and z values to 0. Day #12
-calibrateX(); //Sets navigation's x value from the invisible checkSignal function. Day #13
+// initialize(); //Sets navigation's x, y, and z values to 0. Day #12.
+// calibrateX(); //Sets navigation's x value from the invisible checkSignal function. Day #13.
+// calibrateY(); //Sets navigation's y value from the invisible checkSignal function. Day #14.
+// calibrateZ(); //Sets navigation's z value from the invisible checkSignal function. Day #14.
+// calibrate(); //Sets navigation's x, y, and z values by calling their individual functions. Day #15.
+// setSpeed("42 string"); //Sets navigation's speed to a positive number. Day #16.
+// activateAntenna(); //Sets ship's antenna's active to true. Day #17.
+// sendBroadcast(); // Day #18.
+configureBroadcast(); // Day #19.
+// decodeMessage("th1s 1s 4 t3st. th1s 1s 0nl5 4 t3st. 1f th1s w3r3 4 r34l m3ss4g3, 502 w021d g3t s0m3th1ng m34n1ngf2l."); // Day #20.
+returnToEarth();
